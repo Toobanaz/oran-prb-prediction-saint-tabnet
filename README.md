@@ -15,7 +15,7 @@ This project predicts requested resources using tabular learning models.
 
 - SAINT (Self-Attention and Intersample Transformer)
 - TabNet
-- Baseline comparisons
+
 
 ## 📊 Dataset Source
 

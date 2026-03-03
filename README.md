@@ -17,15 +17,38 @@ This project predicts requested resources using tabular learning models.
 - TabNet
 - Baseline comparisons
 
-## 📊 Dataset
+## 📊 Dataset Source
 
-The dataset (`slices.csv`) contains tabular slice-level features including:
+The dataset used in this study is derived from the ColO-RAN framework:
 
-- Slice ID
-- QoS indicators
-- Traffic demand features
-- Historical resource usage
-- Target: Requested PRBs
+M. Polese, L. Bonati, S. D’Oro, S. Basagni, and T. Melodia,
+“ColO-RAN: Developing machine learning-based xApps for open RAN closed-loop control on programmable experimental platforms,”
+IEEE Transactions on Mobile Computing, 2022.
+
+The ColO-RAN dataset was collected using the Colosseum wireless network emulator and represents a multi-cell 5G scenario with:
+
+- 7 Base Stations (BS1–BS7)
+- 42 User Equipments (UEs)
+- Multiple traffic classes: eMBB, URLLC, and mMTC
+
+## 📁 Data Processing for This Study
+
+For this implementation, we use a combined dataset constructed from
+78,561 slice-level telemetry records extracted from 41 CSV log files
+located in:
+
+shed0/tr0/exp1/
+
+These logs contain:
+
+- Traffic statistics
+- RAN performance metrics
+- Slice-level resource utilization
+- QoS indicators over time
+
+The data has been preprocessed and transformed into a structured
+tabular format (`slices.csv`) suitable for supervised learning and
+PRB demand prediction using transformer-based tabular models.
 
 ## 📈 Evaluation Metrics
 
